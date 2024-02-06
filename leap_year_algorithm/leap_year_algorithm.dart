@@ -1,10 +1,14 @@
-void main() {
-  int year = 2024;
-  if (year % 100 == 0 && year % 400 != 0) {
-    print('平年だあ');
-  } else if (year % 4 == 0) {
+void judgeLeapYear(int year) {
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
     print('閏年だあ');
   } else {
     print('平年だあ');
   }
+}
+
+void main() {
+  judgeLeapYear(2000);
+  judgeLeapYear(2024);
+  judgeLeapYear(2300);
+  judgeLeapYear(2023);
 }
