@@ -1,8 +1,8 @@
 void judgeLeapYear(int year) {
   if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-    print('閏年だあ');
+    print('$year年→閏年だあ');
   } else {
-    print('平年だあ');
+    print('$year年→平年だあ');
   }
 }
 
