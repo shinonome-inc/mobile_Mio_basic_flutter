@@ -12,11 +12,13 @@ void playRockPaperScissors(Hand myHand) {
   print('Player choose: $myHand');
   print('Computer choose: $computerHand');
 
-  if (myHand == computerHand) {
-    print('引き分けや、もう一度勝負しよ');
-  } else if ((myHand == Hand.rock && computerHand == Hand.scissors) ||
+  final bool isDraw = myHand == computerHand;
+  final bool isWin = (myHand == Hand.rock && computerHand == Hand.scissors) ||
       (myHand == Hand.paper && computerHand == Hand.rock) ||
-      (myHand == Hand.scissors && computerHand == Hand.paper)) {
+      (myHand == Hand.scissors && computerHand == Hand.paper);
+  if (isDraw) {
+    print('引き分けや、もう一度勝負しよ');
+  } else if (isWin) {
     print('ワイの負けや。強いな');
   } else {
     print('YOU LOSE 俺の勝ち。何で負けたか、明日まで考えといてください');
