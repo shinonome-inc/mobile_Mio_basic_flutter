@@ -3,7 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'janken_algorithm.dart';
+import 'hand.dart';
 
 class JankenScreen extends StatefulWidget {
   const JankenScreen({Key? key, required this.title}) : super(key: key);
