@@ -18,12 +18,6 @@ class _JankenScreenState extends State<JankenScreen> {
   Hand? _computerHand;
   String _result = '';
 
-  @override
-  void initState() {
-    super.initState();
-    _playJanken();
-  }
-
   void _playJanken([Hand? myHand]) {
     setState(() {
       if (myHand != null) {
@@ -95,8 +89,11 @@ class _JankenScreenState extends State<JankenScreen> {
                         borderRadius: BorderRadius.circular(20), // 角丸の半径を設定
                       ),
                       child: Center(
-                          child: Text(_handToString(hand),
-                              style: const TextStyle(color: Colors.white))),
+                        child: Text(
+                          _handToString(hand),
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
                     ),
                   ),
               ],
