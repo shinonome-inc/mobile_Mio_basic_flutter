@@ -2,7 +2,7 @@ import 'dart:math';
 import 'dart:io';
 
 // enum:特定の値のみが列挙型で定義された値の中から選択できる
-enum Hand { rock, paper, scissors }
+enum Hand { rock, scissors, paper }
 
 void playRockPaperScissors(Hand myHand) {
   final random = Random();
@@ -27,7 +27,7 @@ void playRockPaperScissors(Hand myHand) {
 
 void main() {
   // プレイヤーの手を入力
-  print('じゃんけんしようや (0 for Rock, 1 for Paper, 2 for Scissors):');
+  print('じゃんけんしようや (0 for Rock, 1 for Scissors, 2 for Paper):');
   final input = int.parse(stdin.readLineSync() ?? '');
 
   // 入力を Hand 列挙体に変換して関数に渡す
