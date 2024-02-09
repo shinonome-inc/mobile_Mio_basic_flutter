@@ -10,7 +10,7 @@ class JankenScreen extends StatefulWidget {
   final String title;
 
   @override
-  _JankenScreenState createState() => _JankenScreenState();
+  State<JankenScreen> createState() => _JankenScreenState();
 }
 
 class _JankenScreenState extends State<JankenScreen> {
@@ -30,7 +30,7 @@ class _JankenScreenState extends State<JankenScreen> {
         _myHand = myHand;
         _computerHand = _getComputerHand();
         _result = _getResult(_myHand!, _computerHand!);
-        Timer(Duration(seconds: 3), () => _playJanken());
+        Timer(const Duration(seconds: 3), () => _playJanken());
       } else {
         _myHand = null;
         _computerHand = null;
@@ -80,7 +80,7 @@ class _JankenScreenState extends State<JankenScreen> {
                   ),
                 ],
               ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -96,7 +96,7 @@ class _JankenScreenState extends State<JankenScreen> {
                       ),
                       child: Center(
                           child: Text(_handToString(hand),
-                              style: TextStyle(color: Colors.white))),
+                              style: const TextStyle(color: Colors.white))),
                     ),
                   ),
               ],
